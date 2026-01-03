@@ -257,6 +257,158 @@ main {
 }
 
 
+/* Light Mode (Lilly Pink Twist) */
+body.light-mode {
+    background-color: #ffebf7;  /* Soft pink background */
+    color: #222;                /* Dark text for readability */
+}
+
+.light-mode a {
+    color: #e660b4;             /* Pink links */
+}
+
+.light-mode #hero h1 {
+    color: #e660b4;             /* Pink title */
+}
+
+.light-mode .subtitle,
+.light-mode .contact {
+    color: #555;
+}
+
+.light-mode .contact a {
+    color: #e660b4;
+}
+
+.light-mode .section-title {
+    color: #e660b4;
+}
+
+.light-mode .link-item {
+    background: #fff;           /* White cards */
+    border-color: #ffd1e8;      /* Light pink border */
+    color: #222;
+}
+
+.light-mode .link-item:hover {
+    background: #ffd1e8;        /* Pink hover */
+    border-color: #e660b4;
+}
+
+.light-mode .link-item i {
+    color: #e660b4;             /* Default icons pink in light mode */
+}
+
+/* Override platform icons to fit light mode if needed (keep vibrant) */
+.light-mode .link-item i.fa-youtube { color: #ff0000; }
+.light-mode .link-item i.fa-x-twitter { color: #000; }
+.light-mode .link-item i.fa-github { color: #000; }
+.light-mode .link-item i.fa-spotify { color: #1db954; }
+.light-mode .link-item i.fa-twitch { color: #9146ff; }
+.light-mode .link-item i.fa-instagram { color: #e1306c; }
+.light-mode .link-item i.fa-discord { color: #5865f2; }
+.light-mode .link-item i.fa-robot.ai-icon { color: #e660b4; }
+.light-mode .link-item i.fa-home { color: #e660b4; }
+.light-mode .link-item i.fa-store { color: #e660b4; }
+
+.light-mode .badge {
+    background: #ffd1e8;
+    border-color: #e660b4;
+    color: #e660b4;
+}
+
+.light-mode .badge.live {
+    background: #ffcccb;        /* Light red for live */
+    border-color: #ff0000;
+    color: #ff0000;
+}
+
+.light-mode .badge.offline {
+    background: #f0f0f0;
+    border-color: #ccc;
+    color: #888;
+}
+
+.light-mode .project-header {
+    color: #222;
+}
+
+.light-mode .progress-bar {
+    background: #ffd1e8;
+}
+
+.light-mode .progress-fill {
+    background: #e660b4;        /* Pink progress */
+}
+
+.light-mode .shop-warning {
+    background: #fff;
+    border-color: #ffd1e8;
+    border-left-color: #f0c000;
+    color: #222;
+}
+
+.light-mode .notice {
+    background: #fff;
+    border-color: #ffd1e8;
+}
+
+/* Blob decor in light mode (softer colors) */
+.light-mode .blob {
+    background: radial-gradient(circle, #e660b4 0%, transparent 70%);
+    opacity: 0.3;
+}
+
+/* Header layout - keep logo + name centered */
+#hero .row.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+/* Theme toggle - fixed in top-right corner */
+#theme-toggle {
+    position: absolute;
+    top: 24px;           /* Distance from top of page/header */
+    right: 24px;         /* Distance from right edge */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: #e660b4 !important;   /* Always Lilly pink */
+    z-index: 100;
+    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 8px;        /* Slight hit area */
+    border-radius: 50%;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.2) rotate(20deg);
+    color: #ff9ee6 !important;
+    background: rgba(230, 96, 180, 0.15);  /* Subtle pink glow on hover */
+}
+
+#theme-toggle:active {
+    transform: scale(1.1);
+}
+
+/* Optional: Slightly darker pink in light mode for contrast */
+.light-mode #theme-toggle {
+    color: #c04094 !important;
+}
+
+.light-mode #theme-toggle:hover {
+    color: #e660b4 !important;
+    background: rgba(230, 96, 180, 0.25);
+}
+
+/* Ensure header is positioned relatively so absolute works */
+.header {
+    position: relative;
+}
+
 @media only screen and (max-width: 600px) {
     #hero {
         width: 100%;
@@ -270,6 +422,4 @@ main {
     #hero img {
         height: 80px;
     }
-
 }
-
