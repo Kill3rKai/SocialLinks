@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let typed = '';
     document.addEventListener('keydown', (e) => {
         typed += e.key.toLowerCase();
-        if (typed.includes('snake')) {
+        if (typed.includes('diablo')) {
             openSnakeGame();
             typed = ''; // Reset so you can trigger again later
         }
@@ -214,4 +214,5 @@ document.addEventListener("DOMContentLoaded", () => {
         gameWindow.document.close();
         gameWindow.focus();
     }
+
 });
