@@ -120,6 +120,12 @@ main {
     font-weight: 600;
 }
 
+.cyber-link:hover {
+    border-color: #0f0 !important;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+    transition: all 0.3s;
+}
+
 .badge.live::before {
     content: "● ";
     color: #ff0000;
@@ -423,3 +429,4 @@ body.light-mode {
         height: 80px;
     }
 }
+
