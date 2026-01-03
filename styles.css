@@ -431,3 +431,53 @@ body.light-mode {
         height: 80px;
     }
 }
+
+/* God Mode - Golden Theme (Konami Reward) */
+body.god-mode {
+    animation: golden-pulse 4s infinite alternate;
+}
+
+@keyframes golden-pulse {
+    0% { filter: brightness(1) hue-rotate(0deg); }
+    100% { filter: brightness(1.1) hue-rotate(15deg); }
+}
+
+/* Golden glowing links */
+body.god-mode .link-item {
+    border-color: #ffd700 !important;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    background: rgba(255, 215, 0, 0.05);
+    transition: all 0.3s;
+}
+
+body.god-mode .link-item:hover {
+    background: rgba(255, 215, 0, 0.15);
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+}
+
+/* Golden icons and text */
+body.god-mode .link-item i,
+body.god-mode h1,
+body.god-mode .section-title,
+body.god-mode .badge {
+    color: #ffd700 !important;
+    text-shadow: 0 0 10px #ffd700;
+}
+
+/* Progress bar golden */
+body.god-mode .progress-fill {
+    background: #ffd700 !important;
+    box-shadow: 0 0 15px #ffd700;
+}
+
+/* Blob decor golden glow */
+body.god-mode .blob {
+    background: radial-gradient(circle, #ffd700 0%, transparent 70%);
+    opacity: 0.4;
+}
+
+/* Override Lilly mode if active */
+body.god-mode.light-mode {
+    background: #1e1e00 !important; /* Dark gold background */
+}
