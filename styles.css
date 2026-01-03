@@ -430,3 +430,12 @@ body.light-mode {
     }
 }
 
+/* Optional: Slight horizontal drift for natural feel */
+.light-mode div[style*="💗"] {
+    animation: float-up 8s ease-out forwards, drift 6s infinite alternate ease-in-out;
+}
+
+@keyframes drift {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50px); }
+}
