@@ -430,28 +430,5 @@ body.light-mode {
     }
 }
 
-/* Floating Hearts Animation - Only in Lilly Mode */
-@keyframes float-up {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0.8;
-    }
-    70% {
-        opacity: 0.6;
-    }
-    100% {
-        transform: translateY(-100vh) rotate(360deg);
-        opacity: 0;
-    }
-}
 
-/* Optional: Slight horizontal drift for natural feel */
-.light-mode div[style*="💗"] {
-    animation: float-up 8s ease-out forwards, drift 6s infinite alternate ease-in-out;
-}
-
-@keyframes drift {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(50px); }
-}
 
