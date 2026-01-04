@@ -13,5 +13,4 @@
 This update adds full voice channel support, allowing the AI to join voice calls and engage naturally in voice-based conversations alongside its text capabilities.
 ---
 ## Summary
-- AI can now join and participate in voice channels
 **The AI is no longer limited to text-only interactions. It can now connect to voice channels, listen to ongoing discussions, and contribute verbally when appropriate, maintaining the same intelligent response behavior as in text channels.**
