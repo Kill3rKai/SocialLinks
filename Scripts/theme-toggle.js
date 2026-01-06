@@ -4,13 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
     const toggleButton = document.getElementById('theme-toggle');
     const icon = toggleButton?.querySelector('i');
-    const logoImg = document.querySelector('.logo'); // Your main logo image
+    const logoImg = document.querySelector('.logo'); // main logo image
 
     if (!toggleButton || !icon || !logoImg) return;
 
-    // Paths to your two logos
-    const darkLogo = 'iconfile.jpg';        // Default (dark mode)
-    const lightLogo = 'alt_image.png';       // Lilly mode (light theme)
+    // Paths to the two logos
+    const darkLogo = 'Images/iconfile.jpg';        // Default (dark mode)
+    const lightLogo = 'Images/alt_image.png';       // Lilly mode (light theme)
 
     // Load saved theme
     const savedTheme = localStorage.getItem('theme') || 'dark';
