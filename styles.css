@@ -183,6 +183,22 @@ main {
     transition: width 1.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Lilly AI projects use the robot icon pink */
+.lilly-project .progress-fill {
+    background: #e660b4 !important;
+    box-shadow: 0 0 8px rgba(230, 96, 180, 0.5);
+}
+
+/* Optional: slight hover glow for Lilly projects */
+.lilly-project:hover .progress-fill {
+    box-shadow: 0 0 12px rgba(230, 96, 180, 0.8);
+}
+
+/* If you ever add non-Lilly projects later, they keep default blue */
+.project-card:not(.lilly-project) .progress-fill {
+    background: #60a5fa;
+}
+
 .shop-warning {
     display: flex;
     align-items: flex-start;
@@ -481,3 +497,4 @@ body.god-mode .blob {
 body.god-mode.light-mode {
     background: #1e1e00 !important; /* Dark gold background */
 }
+
