@@ -498,3 +498,116 @@ body.god-mode.light-mode {
     background: #1e1e00 !important; /* Dark gold background */
 }
 
+/* ================================
+   Valentine's Day Heart Decorations
+   ================================ */
+.valentines-sides {
+    z-index: 0;
+    pointer-events: none;
+}
+
+main, .container, .card {
+    position: relative;
+    z-index: 2;
+}
+
+/* Float animation (rotation handled via CSS vars) */
+@keyframes floaty {
+    0%   { transform: translateY(0) rotate(var(--rot)); }
+    50%  { transform: translateY(-14px) rotate(var(--rot)); }
+    100% { transform: translateY(0) rotate(var(--rot)); }
+}
+
+/* Base heart styling */
+.valentines-heart {
+    position: absolute;
+    color: #ff2d55;
+    opacity: 0.9;
+    text-shadow:
+        0 0 8px rgba(255, 45, 85, 0.6),
+        0 0 18px rgba(255, 45, 85, 0.4);
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
+    animation: floaty 6s ease-in-out infinite;
+    will-change: transform;
+}
+
+/* Light mode hearts */
+.light-mode .valentines-heart {
+    color: #e660b4;
+    text-shadow:
+        0 0 10px rgba(230, 96, 180, 0.6),
+        0 0 20px rgba(230, 96, 180, 0.4);
+}
+
+/* ================================
+   Left side hearts (~18% inward)
+   ================================ */
+.valentines-heart.left {
+    left: calc(18% + (var(--offset-x, 0px)));
+}
+
+.valentines-heart.left.h1 { top: 10%; font-size: 55px; --rot: -22deg; --offset-x: 60px;  animation-delay: 0s; }
+.valentines-heart.left.h2 { top: 22%; font-size: 78px; --rot: 18deg;  --offset-x: -40px; animation-delay: 1s; }
+.valentines-heart.left.h3 { top: 35%; font-size: 42px; --rot: -10deg; --offset-x: 80px;  animation-delay: 2s; }
+.valentines-heart.left.h4 { top: 48%; font-size: 68px; --rot: 25deg;  --offset-x: 20px;  animation-delay: 0.6s; }
+.valentines-heart.left.h5 { top: 60%; font-size: 50px; --rot: -15deg; --offset-x: -60px; animation-delay: 1.4s; }
+.valentines-heart.left.h6 { top: 72%; font-size: 82px; --rot: 12deg;  --offset-x: 70px;  animation-delay: 2.4s; }
+.valentines-heart.left.h7 { top: 84%; font-size: 38px; --rot: -28deg; --offset-x: 45px;  animation-delay: 0.9s; }
+.valentines-heart.left.h8 { top: 94%; font-size: 65px; --rot: 20deg;  --offset-x: -50px; animation-delay: 1.8s; opacity: 0.7; }
+
+/* ================================
+   Right side hearts (mirrored)
+   ================================ */
+.valentines-heart.right {
+    right: calc(18% + (var(--offset-x, 0px)));
+}
+
+.valentines-heart.right.h1 { top: 12%; font-size: 60px; --rot: 24deg;  --offset-x: -65px; animation-delay: 0.2s; }
+.valentines-heart.right.h2 { top: 26%; font-size: 75px; --rot: -16deg; --offset-x: 50px;  animation-delay: 1.2s; }
+.valentines-heart.right.h3 { top: 39%; font-size: 45px; --rot: 14deg;  --offset-x: -75px; animation-delay: 2.2s; }
+.valentines-heart.right.h4 { top: 51%; font-size: 70px; --rot: -20deg; --offset-x: 35px;  animation-delay: 0.8s; }
+.valentines-heart.right.h5 { top: 63%; font-size: 52px; --rot: 10deg;  --offset-x: 60px;  animation-delay: 1.6s; }
+.valentines-heart.right.h6 { top: 75%; font-size: 80px; --rot: -22deg; --offset-x: -45px; animation-delay: 2.6s; }
+.valentines-heart.right.h7 { top: 86%; font-size: 40px; --rot: 18deg;  --offset-x: 55px;  animation-delay: 1s; }
+.valentines-heart.right.h8 { top: 95%; font-size: 62px; --rot: -12deg; --offset-x: -40px; animation-delay: 1.9s; opacity: 0.7; }
+
+/* ================================
+   Mobile adjustments
+   ================================ */
+@media only screen and (max-width: 600px) {
+    .valentines-heart {
+        font-size: 35px !important;
+        opacity: 0.6;
+    }
+
+    .valentines-heart:nth-child(n+6) {
+        display: none;
+    }
+
+    .valentines-heart.left {
+        left: calc(10% + (var(--offset-x, 0px)));
+    }
+
+    .valentines-heart.right {
+        right: calc(10% + (var(--offset-x, 0px)));
+    }
+}
+
+/* Force readable text in light mode on this page only */
+body.light-mode .about-content,
+body.light-mode .about-content *,
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode p,
+body.light-mode span,
+body.light-mode .subtitle,
+body.light-mode .contact,
+body.light-mode .back-link a {
+    color: #222 !important;
+}
+
+/* Make sure links are still pink but readable */
+body.light-mode a {
+    color: #e660b4 !important;
+}
+
