@@ -17,6 +17,34 @@ main {
     padding: 24px 16px 48px;
 }
 
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.8;
+    font-size: 18px;
+    color: #ddd;
+}
+.about-content p {
+    margin-bottom: 24px;
+}
+.about-content strong {
+    color: #60a5fa;
+}
+.highlight {
+    color: #e660b4;
+    font-weight: bold;
+}
+.back-link {
+    text-align: center;
+    margin: 60px 0 20px;
+}
+.back-link a {
+    color: #60a5fa;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 18px;
+}
 
 #hero {
     margin: 24px auto 12px;
@@ -610,4 +638,3 @@ body.light-mode .back-link a {
 body.light-mode a {
     color: #e660b4 !important;
 }
-
