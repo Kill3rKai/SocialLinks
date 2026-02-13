@@ -1,0 +1,79 @@
+body {
+    background: black;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    font-size: 17px;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#startScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #888;
+    font-weight: bold;
+    user-select: none;
+    animation: blinkOldSchool 1.5s steps(2, start) infinite;
+}
+
+@keyframes blinkOldSchool {
+    0%, 50% { opacity: 1; }
+    50.01%, 100% { opacity: 0; }
+}
+
+#biosScreen, #hardwareScreen, #windowsScreen, #blackScreen {
+    display: none;
+    position: relative;
+}
+
+#energyLogo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 240px;
+    image-rendering: pixelated;
+}
+
+#bios, #hardwareText, #windowsText {
+    white-space: pre-line;
+    margin-top: 0;
+}
+
+#bottomLeft {
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+    font-weight: bold;
+}
+
+#cursor, #cursorHardware, #cursorWindows {
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    background: #00ff00;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { background: transparent; }
+}
+
+#hardwareIcon {
+    width: 100px;
+    image-rendering: pixelated;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#blackScreen {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Booting...</title>
+
+<link rel="stylesheet" href="bios.css">
+<link rel="icon" href="Images/clearimage.png" sizes="32x32" />
+</head>
+
+<body>
+
+<audio id="bootAudio" src="sounds/boot-sequence.mp3" preload="auto"></audio>
+<audio id="beepAudio" src="sounds/beep.mp3" preload="auto"></audio>
+
+<div id="startScreen">Click to start...</div>
+
+<div id="biosScreen">
+    <img id="energyLogo" src="Images/energy.png" alt="EnergyStar Logo">
+    <div id="bios"></div>
+    <div id="cursor"></div>
+    <div id="bottomLeft">Press F1 to continue, DEL to enter SETUP</div>
+</div>
+
+<div id="blackScreen"></div>
+
+<div id="hardwareScreen">
+    <img id="hardwareIcon" src="Images/biosico.jpg" alt="BIOS Icon">
+    <div id="hardwareText"></div>
+    <div id="cursorHardware"></div>
+</div>
+
+<div id="windowsScreen">
+    <div id="windowsText"></div>
+    <div id="cursorWindows"></div>
+</div>
+
+<script src="Scripts/bios.js"></script>
+
+</body>
+</html>
