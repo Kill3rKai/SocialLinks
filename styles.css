@@ -144,6 +144,7 @@ main {
 
 /* Home and store (merch) icon colors */
 .link-item i.fa-home { color: #60a5fa; }
+.link-item i.fa-download { color: #60a5fa; }
 .link-item i.fa-store { color: #a78bfa; }
 
 .link-item span {
@@ -670,3 +671,4 @@ body.light-mode .back-link a {
 body.light-mode a {
     color: #e660b4 !important;
 }
+
