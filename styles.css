@@ -239,6 +239,7 @@ main {
     color: #aaaaaa;
     position: relative;
     top: -5px;
+    left: 4px;
 }
 
 
@@ -772,3 +773,4 @@ body.light-mode .back-link a {
 body.light-mode a {
     color: #e660b4 !important;
 }
+
