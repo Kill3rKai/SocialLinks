@@ -231,6 +231,17 @@ main {
     background: #60a5fa;
 }
 
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    position: relative;
+    top: -5px;
+}
+
+
 .shop-warning {
     display: flex;
     align-items: flex-start;
@@ -657,6 +668,93 @@ main, .container, .card {
     }
 }
 
+/* ================================
+   St. Patrick's Day Clover Decorations
+   ================================ */
+.stpatricks-sides {
+    z-index: 0;
+    pointer-events: none;
+}
+
+main, .container, .card {
+    position: relative;
+    z-index: 2;
+}
+
+/* Float animation (rotation handled via CSS vars) */
+@keyframes floaty {
+    0%   { transform: translateY(0) rotate(var(--rot)); }
+    50%  { transform: translateY(-14px) rotate(var(--rot)); }
+    100% { transform: translateY(0) rotate(var(--rot)); }
+}
+
+/* Base clover styling */
+.stpatricks-clover {
+    position: absolute;
+    color: #18b64b; /* rich shamrock green */
+    opacity: 0.95;
+    text-shadow:
+        0 0 8px rgba(24, 182, 75, 0.6),
+        0 0 18px rgba(24, 182, 75, 0.4);
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
+    animation: floaty 6s ease-in-out infinite;
+    will-change: transform;
+}
+
+/* Light mode clovers */
+.light-mode .stpatricks-clover {
+    color: #2ecc71;
+    text-shadow:
+        0 0 10px rgba(46, 204, 113, 0.6),
+        0 0 20px rgba(46, 204, 113, 0.4);
+}
+
+/* ================================
+   Left side clovers
+   ================================ */
+.stpatricks-clover.left {
+    left: calc(10% + (var(--offset-x, 0px)));
+}
+
+.stpatricks-clover.left.h1 { top: 10%; font-size: 55px; --rot: -22deg; --offset-x: 60px;  animation-delay: 0s; }
+.stpatricks-clover.left.h2 { top: 22%; font-size: 78px; --rot: 18deg;  --offset-x: -40px; animation-delay: 1s; }
+.stpatricks-clover.left.h3 { top: 35%; font-size: 42px; --rot: -10deg; --offset-x: 80px;  animation-delay: 2s; }
+.stpatricks-clover.left.h4 { top: 48%; font-size: 68px; --rot: 25deg;  --offset-x: 20px;  animation-delay: 0.6s; }
+.stpatricks-clover.left.h5 { top: 60%; font-size: 50px; --rot: -15deg; --offset-x: -60px; animation-delay: 1.4s; }
+.stpatricks-clover.left.h6 { top: 72%; font-size: 82px; --rot: 12deg;  --offset-x: 70px;  animation-delay: 2.4s; }
+.stpatricks-clover.left.h7 { top: 84%; font-size: 38px; --rot: -28deg; --offset-x: 45px;  animation-delay: 0.9s; }
+.stpatricks-clover.left.h8 { top: 94%; font-size: 65px; --rot: 20deg;  --offset-x: -50px; animation-delay: 1.8s; opacity: 0.75; }
+
+/* ================================
+   Right side clovers (mirrored)
+   ================================ */
+.stpatricks-clover.right {
+    right: calc(10% + (var(--offset-x, 0px)));
+}
+
+.stpatricks-clover.right.h1 { top: 12%; font-size: 60px; --rot: 24deg;  --offset-x: -65px; animation-delay: 0.2s; }
+.stpatricks-clover.right.h2 { top: 26%; font-size: 75px; --rot: -16deg; --offset-x: 50px;  animation-delay: 1.2s; }
+.stpatricks-clover.right.h3 { top: 39%; font-size: 45px; --rot: 14deg;  --offset-x: -75px; animation-delay: 2.2s; }
+.stpatricks-clover.right.h4 { top: 51%; font-size: 70px; --rot: -20deg; --offset-x: 35px;  animation-delay: 0.8s; }
+.stpatricks-clover.right.h5 { top: 63%; font-size: 52px; --rot: 10deg;  --offset-x: 60px;  animation-delay: 1.6s; }
+.stpatricks-clover.right.h6 { top: 75%; font-size: 80px; --rot: -22deg; --offset-x: -45px; animation-delay: 2.6s; }
+.stpatricks-clover.right.h7 { top: 86%; font-size: 40px; --rot: 18deg;  --offset-x: 55px;  animation-delay: 1s; }
+.stpatricks-clover.right.h8 { top: 95%; font-size: 62px; --rot: -12deg; --offset-x: -40px; animation-delay: 1.9s; opacity: 0.75; }
+
+/* ================================
+   Mobile adjustments
+   ================================ */
+@media only screen and (max-width: 600px) {
+    .stpatricks-clover {
+        font-size: 35px !important;
+        opacity: 0.6;
+    }
+
+    .stpatricks-clover:nth-child(n+6) {
+        display: none;
+    }
+}
+
 /* Force readable text in light mode on this page only */
 body.light-mode .about-content,
 body.light-mode .about-content *,
@@ -674,6 +772,3 @@ body.light-mode .back-link a {
 body.light-mode a {
     color: #e660b4 !important;
 }
-
-
-
